@@ -1,0 +1,16 @@
+' VBA Loop to Find total number of Rows
+' Dependent on having a column that always has a value for every row
+
+Dim EmptyRow As Boolean
+Dim i As Long
+i = 2
+
+Do While EmptyRow = False
+	If Cells(i, "AD").Value = "" Then
+		EmptyRow = True
+    Else
+        i = i + 1
+  End If
+Loop
+
+i = i - 1
